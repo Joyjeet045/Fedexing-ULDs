@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js ULD Visualization</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.skypack.dev/three@0.90.0/build/three.module"
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: black; font-family: sans-serif; }
+        
+        #button-container {
+            position: absolute; top: 10px; left: 10px; z-index: 10;
+            background: rgba(255, 255, 255, 0.2);
+            color: white; padding: 15px; border-radius: 8px;
+            display: flex; flex-direction: column; gap: 8px;
+        }
+
+        button, input {
+            font-size: 14px; padding: 8px; cursor: pointer;
+            background-color: #444; color: white; border: 1px solid #666; border-radius: 4px;
+        }
+        button:hover { background-color: #666; }
+
+        label { font-size: 12px; margin-bottom: 2px; color: #ccc; }
+
+        #stats-container {
+            position: absolute; top: 10px; right: 10px; z-index: 10;
+            background: rgba(0, 0, 0, 0.7); color: white;
+            padding: 15px; border-radius: 8px; pointer-events: none;
+            width: 300px;
+        }
+
+        .stat-line { margin-bottom: 8px; font-size: 16px; }
+        .stat-value { font-weight: bold; color: #4facfe; }
+
+        #legend {
+            position: absolute; bottom: 20px; left: 20px;
+            color: white; background: rgba(0,0,0,0.5); padding: 10px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="button-container">
+        <label>1. Upload feed.json (Metadata):</label>
+        <input type="file" id="jsonUploader" accept=".json" />
+        
+        <label>2. Upload Solution (.txt):</label>
+        <input type="file" id="fileUploader" accept=".txt" />
+        
+        <hr style="width: 100%; border-color: #666;">
+        
+        <button id="nextBinButton">Next Bin (ULD)</button>
+        <div style="display: flex; gap: 5px;">
+            <button id="zoomInButton" style="flex: 1;">Zoom In</button>
+            <button id="zoomOutButton" style="flex: 1;">Zoom Out</button>
+        </div>
+    </div>
+
+    <div id="stats-container">
+        <div class="stat-line">Bin ID: <span id="binLabel" class="stat-value">-</span></div>
+        <div class="stat-line">Vol. Efficiency: <span id="volEffLabel" class="stat-value">0%</span></div>
+        <div class="stat-line">Weight Efficiency: <span id="weightEffLabel" class="stat-value">0%</span></div>
+        <div class="stat-line">Priority Packages: <span id="priorityLabel" class="stat-value">0</span></div>
+        <div class="stat-line" style="font-size: 14px;">Center of Mass: <span id="comLabel" style="color: #ddd;">(0, 0, 0)</span></div>
+    </div>
+
+    <div id="legend">
+        <div><span style="color: #FF4444;">■</span> Priority Packages (Red)</div>
+        <div><span style="color: #FFFF44;">■</span> Economy Packages (Yellow)</div>
+        <div><span style="color: #00FF00;">➡</span> Y-Axis (Vertical Height)</div>
+        <div><span style="color: #0000FF;">➡</span> Z-Axis (Depth/Width)</div>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from "https://unpkg.com/three@0.112/examples/jsm/controls/OrbitControls.js";
+
+        let tempoutput = [];
+        let output = [];
+        let scene, camera, renderer, controls, gridHelper;
+        
+        const ulds = {
+            "ULD-1": { length: 224, width: 318, height: 162, weight_limit: 2500 },
+            "ULD-2": { length: 224, width: 318, height: 162, weight_limit: 2500 },
+            "ULD-3": { length: 244, width: 318, height: 244, weight_limit: 2800 },
+            "ULD-4": { length: 244, width: 318, height: 244, weight_limit: 2800 },
+            "ULD-5": { length: 244, width: 318, height: 285, weight_limit: 3500 },
+            "ULD-6": { length: 244, width: 318, height: 285, weight_limit: 3500 }
+        };
+
+        let currentBinIndex = 0;
+        let currentBinID = '';
+
+        initScene();
+        setupEventListeners();
+
+        function getPackageMetadata(idString) {
+            if (!tempoutput.length) return null;
+            const cleanId = String(idString).replace(/\D/g, '');
+            return tempoutput.find(item => {
+                return String(item.pkgID).replace(/\D/g, '') === cleanId;
+            });
+        }
+
+        function calculateStats(packageList, uldID) {
+            const uld = ulds[uldID];
+            if (!uld) return;
+
+            let totalPkgVol = 0;
+            let totalPkgWeight = 0;
+            let priorityCount = 0;
+            let weightedX = 0, weightedY = 0, weightedZ = 0;
+            let totalWeightForCOM = 0;
+
+            packageList.forEach(pkg => {
+                totalPkgVol += (pkg.length * pkg.width * pkg.height);
+
+                const meta = getPackageMetadata(pkg.pkgID);
+                const weight = meta ? Number(meta.weight) : 0;
+                const isPriority = meta ? meta.ispriority : false;
+
+                totalPkgWeight += weight;
+                if (isPriority) priorityCount++;
+
+                const mass = weight > 0 ? weight : 1; 
+                totalWeightForCOM += mass;
+                weightedX += mass * (pkg.x + pkg.length / 2);
+                weightedY += mass * (pkg.y + pkg.height / 2); 
+                weightedZ += mass * (pkg.z + pkg.width / 2);  
+            });
+
+            const volEff = ((totalPkgVol / (uld.length * uld.width * uld.height)) * 100).toFixed(2);
+            const weightEff = ((totalPkgWeight / uld.weight_limit) * 100).toFixed(2);
+            
+            let comX = 0, comY = 0, comZ = 0;
+            if (totalWeightForCOM > 0) {
+                comX = (weightedX / totalWeightForCOM).toFixed(1);
+                comY = (weightedY / totalWeightForCOM).toFixed(1);
+                comZ = (weightedZ / totalWeightForCOM).toFixed(1);
+            }
+
+            document.getElementById("binLabel").innerText = uldID;
+            document.getElementById("volEffLabel").innerText = `${volEff}%`;
+            document.getElementById("weightEffLabel").innerText = `${weightEff}%`;
+            document.getElementById("priorityLabel").innerText = priorityCount;
+            document.getElementById("comLabel").innerText = `(${comX}, ${comY}, ${comZ})`;
+        }
+
+        function handleJsonUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    tempoutput = data.pkg_positions.map(p => ({
+                        pkgID: String(p.pkg_id),
+                        weight: p.weight,
+                        cost: p.cost,
+                        ispriority: p.ispriority
+                    }));
+                    console.log("JSON Loaded. Packages:", tempoutput.length);
+                    alert(`Loaded metadata for ${tempoutput.length} packages.`);
+                    
+                    if (output.length > 0) {
+                        const currentPackageList = output.filter(pkg => pkg.uldID === currentBinID);
+                        visualizeBin(currentBinID, currentPackageList);
+                    }
+                } catch (err) {
+                    alert("Error parsing JSON: " + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function handleSolutionUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const text = e.target.result;
+                const lines = text.split('\n').filter(line => line.trim() !== '');
+                
+                output = lines.map(line => {
+                    const vals = line.split(',');
+                    if (vals.length < 8) return null;
+
+                    const rawID = vals[0].trim();
+                    const uldStr = vals[1].trim();
+                    const isNone = uldStr === 'NONE';
+
+                    const fileX = parseInt(vals[2]);
+                    const fileY = parseInt(vals[3]);
+                    const fileZ = parseInt(vals[4]);
+                    
+                    const fileXMax = parseInt(vals[5]);
+                    const fileYMax = parseInt(vals[6]);
+                    const fileZMax = parseInt(vals[7]);
+
+                    const pkgLength = fileXMax - fileX;
+                    const pkgWidth  = fileYMax - fileY; 
+                    const pkgHeight = fileZMax - fileZ;
+
+                    return {
+                        pkgID: rawID,
+                        uldID: isNone ? 'NONE' : `ULD-${uldStr.replace(/\D/g, '')}`,
+                        
+                        x: fileX,
+                        y: fileZ, 
+                        z: fileY, 
+                        
+                        length: pkgLength, 
+                        height: pkgHeight, 
+                        width: pkgWidth    
+                    };
+                }).filter(p => p && p.uldID !== 'NONE');
+
+                console.log("Solution Loaded. Boxes:", output.length);
+                
+                currentBinIndex = 0;
+                currentBinID = Object.keys(ulds)[0];
+                const list = output.filter(pkg => pkg.uldID === currentBinID);
+                visualizeBin(currentBinID, list);
+            };
+            reader.readAsText(file);
+        }
+
+        function createBox(pkg) {
+            const meta = getPackageMetadata(pkg.pkgID);
+            const isPriority = meta ? meta.ispriority : false;
+
+            const hue = Math.random();
+            const saturation = 0.6 + Math.random() * 0.4;
+            const lightness = 0.4 + Math.random() * 0.4;
+            const color = new THREE.Color().setHSL(hue, saturation, lightness);
+
+            const material = new THREE.MeshLambertMaterial({
+                color: color,
+                transparent: true,
+                opacity: 0.8
+            });
+
+            const geometry = new THREE.BoxGeometry(pkg.length, pkg.height, pkg.width);
+            const mesh = new THREE.Mesh(geometry, material);
+
+            mesh.position.set(
+                pkg.x + pkg.length / 2,
+                pkg.y + pkg.height / 2, 
+                pkg.z + pkg.width / 2   
+            );
+
+            const edges = new THREE.EdgesGeometry(geometry);
+            const lineMat = new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 2 });
+            const wireframe = new THREE.LineSegments(edges, lineMat);
+            mesh.add(wireframe);
+
+            scene.add(mesh);
+        }
+
+        function visualizeBin(uldID, packages) {
+            while(scene.children.length > 0) { 
+                scene.remove(scene.children[0]); 
+            }
+            scene.add(gridHelper);
+            
+            const ambLight = new THREE.AmbientLight(0xffffff, 0.6);
+            const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            dirLight.position.set(100, 200, 100);
+            scene.add(ambLight, dirLight);
+
+            addAxes(300);
+
+            const uld = ulds[uldID];
+            if(uld) {
+                const geo = new THREE.BoxGeometry(uld.length, uld.height, uld.width);
+                const edges = new THREE.EdgesGeometry(geo);
+                const mat = new THREE.LineBasicMaterial({ color: 0x4facfe });
+                const box = new THREE.LineSegments(edges, mat);
+                
+                box.position.set(uld.length/2, uld.height/2, uld.width/2);
+                scene.add(box);
+            }
+
+            packages.forEach(createBox);
+
+            calculateStats(packages, uldID);
+        }
+
+        function addAxes(size) {
+            const axesHelper = new THREE.AxesHelper(size);
+            scene.add(axesHelper);
+        }
+
+        function initScene() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x222222);
+
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
+            camera.position.set(400, 400, 400);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+
+            gridHelper = new THREE.GridHelper(1000, 50, 0x444444, 0x444444);
+            scene.add(gridHelper);
+
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+
+            animate();
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        function setupEventListeners() {
+            document.getElementById("jsonUploader").addEventListener("change", handleJsonUpload);
+            document.getElementById("fileUploader").addEventListener("change", handleSolutionUpload);
+            
+            document.getElementById("nextBinButton").addEventListener("click", () => {
+                const keys = Object.keys(ulds);
+                currentBinIndex = (currentBinIndex + 1) % keys.length;
+                currentBinID = keys[currentBinIndex];
+                const list = output.filter(p => p.uldID === currentBinID);
+                visualizeBin(currentBinID, list);
+            });
+
+            document.getElementById("zoomInButton").addEventListener("click", () => {
+                camera.translateZ(-50);
+            });
+            document.getElementById("zoomOutButton").addEventListener("click", () => {
+                camera.translateZ(50);
+            });
+        }
+    </script>
+</body>
+</html>
