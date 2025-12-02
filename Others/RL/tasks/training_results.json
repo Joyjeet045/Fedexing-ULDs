@@ -1,0 +1,2700 @@
+{
+  "training_start": "2025-12-02T05:18:37.167557",
+  "device": "cpu",
+  "iterations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-02T05:18:37.167772",
+      "parameters": {
+        "games_per_iteration": 4,
+        "simulations_per_move": 32,
+        "epochs": 5
+      },
+      "game_generation": {
+        "games": [
+          {
+            "game_index": 0,
+            "container_height": 24,
+            "initial_packages": [
+              {
+                "index": 0,
+                "dimensions": [
+                  6,
+                  6,
+                  5
+                ]
+              },
+              {
+                "index": 1,
+                "dimensions": [
+                  6,
+                  7,
+                  7
+                ]
+              },
+              {
+                "index": 2,
+                "dimensions": [
+                  4,
+                  5,
+                  5
+                ]
+              },
+              {
+                "index": 3,
+                "dimensions": [
+                  5,
+                  7,
+                  6
+                ]
+              },
+              {
+                "index": 4,
+                "dimensions": [
+                  8,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 5,
+                "dimensions": [
+                  8,
+                  6,
+                  6
+                ]
+              },
+              {
+                "index": 6,
+                "dimensions": [
+                  4,
+                  6,
+                  6
+                ]
+              },
+              {
+                "index": 7,
+                "dimensions": [
+                  7,
+                  7,
+                  5
+                ]
+              },
+              {
+                "index": 8,
+                "dimensions": [
+                  5,
+                  6,
+                  5
+                ]
+              },
+              {
+                "index": 9,
+                "dimensions": [
+                  8,
+                  6,
+                  5
+                ]
+              },
+              {
+                "index": 10,
+                "dimensions": [
+                  6,
+                  4,
+                  5
+                ]
+              },
+              {
+                "index": 11,
+                "dimensions": [
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "index": 12,
+                "dimensions": [
+                  5,
+                  8,
+                  8
+                ]
+              },
+              {
+                "index": 13,
+                "dimensions": [
+                  4,
+                  7,
+                  5
+                ]
+              },
+              {
+                "index": 14,
+                "dimensions": [
+                  4,
+                  7,
+                  4
+                ]
+              },
+              {
+                "index": 15,
+                "dimensions": [
+                  6,
+                  6,
+                  7
+                ]
+              },
+              {
+                "index": 16,
+                "dimensions": [
+                  5,
+                  7,
+                  4
+                ]
+              },
+              {
+                "index": 17,
+                "dimensions": [
+                  7,
+                  5,
+                  5
+                ]
+              },
+              {
+                "index": 18,
+                "dimensions": [
+                  6,
+                  7,
+                  7
+                ]
+              },
+              {
+                "index": 19,
+                "dimensions": [
+                  6,
+                  8,
+                  4
+                ]
+              },
+              {
+                "index": 20,
+                "dimensions": [
+                  5,
+                  4,
+                  7
+                ]
+              },
+              {
+                "index": 21,
+                "dimensions": [
+                  5,
+                  8,
+                  4
+                ]
+              },
+              {
+                "index": 22,
+                "dimensions": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "index": 23,
+                "dimensions": [
+                  4,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 24,
+                "dimensions": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "index": 25,
+                "dimensions": [
+                  7,
+                  6,
+                  7
+                ]
+              },
+              {
+                "index": 26,
+                "dimensions": [
+                  8,
+                  8,
+                  4
+                ]
+              },
+              {
+                "index": 27,
+                "dimensions": [
+                  6,
+                  4,
+                  8
+                ]
+              },
+              {
+                "index": 28,
+                "dimensions": [
+                  8,
+                  5,
+                  7
+                ]
+              },
+              {
+                "index": 29,
+                "dimensions": [
+                  8,
+                  8,
+                  6
+                ]
+              },
+              {
+                "index": 30,
+                "dimensions": [
+                  7,
+                  8,
+                  7
+                ]
+              },
+              {
+                "index": 31,
+                "dimensions": [
+                  4,
+                  8,
+                  8
+                ]
+              }
+            ],
+            "moves": [
+              {
+                "step": 0,
+                "packages_remaining": 32,
+                "current_reward": 0.0,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.10810811072587967
+                  }
+                ]
+              },
+              {
+                "step": 1,
+                "packages_remaining": 31,
+                "current_reward": 0.029296875,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.06818182021379471
+                  },
+                  {
+                    "action_id": 163,
+                    "probability": 0.06818182021379471
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "packages_remaining": 30,
+                "current_reward": 0.0771484375,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.13953489065170288
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.13953489065170288
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.11627907305955887
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.11627907305955887
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.09302325546741486
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "packages_remaining": 29,
+                "current_reward": 0.0934244766831398,
+                "top_5_actions": [
+                  {
+                    "action_id": 137,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.04545454680919647
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.04545454680919647
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.04545454680919647
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "packages_remaining": 28,
+                "current_reward": 0.1276041716337204,
+                "top_5_actions": [
+                  {
+                    "action_id": 136,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.04545454680919647
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.04545454680919647
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "packages_remaining": 27,
+                "current_reward": 0.1536458283662796,
+                "top_5_actions": [
+                  {
+                    "action_id": 135,
+                    "probability": 0.19512194395065308
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 119,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "packages_remaining": 26,
+                "current_reward": 0.2005208283662796,
+                "top_5_actions": [
+                  {
+                    "action_id": 135,
+                    "probability": 0.10869564861059189
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.10869564861059189
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.08695652335882187
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.08695652335882187
+                  },
+                  {
+                    "action_id": 152,
+                    "probability": 0.08695652335882187
+                  }
+                ]
+              },
+              {
+                "step": 7,
+                "packages_remaining": 25,
+                "current_reward": 0.2239583283662796,
+                "top_5_actions": [
+                  {
+                    "action_id": 8,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 23,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 8,
+                "packages_remaining": 24,
+                "current_reward": 0.2638346254825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 41,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 113,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.04878048598766327
+                  }
+                ]
+              },
+              {
+                "step": 9,
+                "packages_remaining": 23,
+                "current_reward": 0.2882486879825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 8,
+                    "probability": 0.23076923191547394
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.12820513546466827
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.12820513546466827
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.12820513546466827
+                  },
+                  {
+                    "action_id": 9,
+                    "probability": 0.12820513546466827
+                  }
+                ]
+              },
+              {
+                "step": 10,
+                "packages_remaining": 22,
+                "current_reward": 0.3273111879825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 41,
+                    "probability": 0.0625
+                  },
+                  {
+                    "action_id": 130,
+                    "probability": 0.0625
+                  },
+                  {
+                    "action_id": 147,
+                    "probability": 0.0625
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0416666679084301
+                  }
+                ]
+              },
+              {
+                "step": 11,
+                "packages_remaining": 21,
+                "current_reward": 0.3468424379825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.11999999731779099
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.11999999731779099
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.07999999821186066
+                  },
+                  {
+                    "action_id": 23,
+                    "probability": 0.07999999821186066
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.07999999821186066
+                  }
+                ]
+              },
+              {
+                "step": 12,
+                "packages_remaining": 20,
+                "current_reward": 0.3859049379825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 8,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 23,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 38,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 6,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 13,
+                "packages_remaining": 19,
+                "current_reward": 0.43798828125,
+                "top_5_actions": [
+                  {
+                    "action_id": 8,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 41,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 128,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 6,
+                    "probability": 0.05882352963089943
+                  }
+                ]
+              },
+              {
+                "step": 14,
+                "packages_remaining": 18,
+                "current_reward": 0.4607747495174408,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 16,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 17,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 32,
+                    "probability": 0.1428571492433548
+                  }
+                ]
+              }
+            ],
+            "baseline_reward": 0.3859049379825592,
+            "mcts_reward": 0.47900390625,
+            "improvement": 0.0930989682674408
+          },
+          {
+            "game_index": 1,
+            "container_height": 24,
+            "initial_packages": [
+              {
+                "index": 0,
+                "dimensions": [
+                  4,
+                  6,
+                  6
+                ]
+              },
+              {
+                "index": 1,
+                "dimensions": [
+                  6,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 2,
+                "dimensions": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "index": 3,
+                "dimensions": [
+                  7,
+                  7,
+                  6
+                ]
+              },
+              {
+                "index": 4,
+                "dimensions": [
+                  6,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 5,
+                "dimensions": [
+                  6,
+                  6,
+                  8
+                ]
+              },
+              {
+                "index": 6,
+                "dimensions": [
+                  5,
+                  8,
+                  8
+                ]
+              },
+              {
+                "index": 7,
+                "dimensions": [
+                  7,
+                  5,
+                  8
+                ]
+              },
+              {
+                "index": 8,
+                "dimensions": [
+                  4,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 9,
+                "dimensions": [
+                  4,
+                  7,
+                  8
+                ]
+              },
+              {
+                "index": 10,
+                "dimensions": [
+                  4,
+                  6,
+                  5
+                ]
+              },
+              {
+                "index": 11,
+                "dimensions": [
+                  4,
+                  8,
+                  8
+                ]
+              },
+              {
+                "index": 12,
+                "dimensions": [
+                  8,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 13,
+                "dimensions": [
+                  8,
+                  7,
+                  8
+                ]
+              },
+              {
+                "index": 14,
+                "dimensions": [
+                  4,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 15,
+                "dimensions": [
+                  6,
+                  8,
+                  6
+                ]
+              },
+              {
+                "index": 16,
+                "dimensions": [
+                  4,
+                  8,
+                  5
+                ]
+              },
+              {
+                "index": 17,
+                "dimensions": [
+                  5,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 18,
+                "dimensions": [
+                  8,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 19,
+                "dimensions": [
+                  6,
+                  4,
+                  8
+                ]
+              },
+              {
+                "index": 20,
+                "dimensions": [
+                  8,
+                  5,
+                  5
+                ]
+              },
+              {
+                "index": 21,
+                "dimensions": [
+                  6,
+                  4,
+                  5
+                ]
+              },
+              {
+                "index": 22,
+                "dimensions": [
+                  6,
+                  8,
+                  7
+                ]
+              },
+              {
+                "index": 23,
+                "dimensions": [
+                  7,
+                  8,
+                  7
+                ]
+              },
+              {
+                "index": 24,
+                "dimensions": [
+                  4,
+                  7,
+                  6
+                ]
+              },
+              {
+                "index": 25,
+                "dimensions": [
+                  5,
+                  6,
+                  6
+                ]
+              },
+              {
+                "index": 26,
+                "dimensions": [
+                  8,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 27,
+                "dimensions": [
+                  6,
+                  6,
+                  8
+                ]
+              },
+              {
+                "index": 28,
+                "dimensions": [
+                  8,
+                  4,
+                  8
+                ]
+              },
+              {
+                "index": 29,
+                "dimensions": [
+                  5,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 30,
+                "dimensions": [
+                  8,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 31,
+                "dimensions": [
+                  7,
+                  5,
+                  4
+                ]
+              }
+            ],
+            "moves": [
+              {
+                "step": 0,
+                "packages_remaining": 32,
+                "current_reward": 0.0,
+                "top_5_actions": [
+                  {
+                    "action_id": 137,
+                    "probability": 0.15625
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.125
+                  }
+                ]
+              },
+              {
+                "step": 1,
+                "packages_remaining": 31,
+                "current_reward": 0.0234375,
+                "top_5_actions": [
+                  {
+                    "action_id": 137,
+                    "probability": 0.13636364042758942
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.11363636702299118
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "packages_remaining": 30,
+                "current_reward": 0.052734375,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.1818181872367859
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.11363636702299118
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.11363636702299118
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "packages_remaining": 29,
+                "current_reward": 0.0631510391831398,
+                "top_5_actions": [
+                  {
+                    "action_id": 4,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 5,
+                    "probability": 0.04444444552063942
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.04444444552063942
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "packages_remaining": 28,
+                "current_reward": 0.1110026016831398,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "packages_remaining": 27,
+                "current_reward": 0.1344401091337204,
+                "top_5_actions": [
+                  {
+                    "action_id": 136,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "packages_remaining": 26,
+                "current_reward": 0.1813151091337204,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 5,
+                    "probability": 0.04878048598766327
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.04878048598766327
+                  },
+                  {
+                    "action_id": 20,
+                    "probability": 0.04878048598766327
+                  }
+                ]
+              },
+              {
+                "step": 7,
+                "packages_remaining": 25,
+                "current_reward": 0.2333984375,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.17241379618644714
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.06896551698446274
+                  },
+                  {
+                    "action_id": 113,
+                    "probability": 0.06896551698446274
+                  },
+                  {
+                    "action_id": 115,
+                    "probability": 0.06896551698446274
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.06896551698446274
+                  }
+                ]
+              },
+              {
+                "step": 8,
+                "packages_remaining": 24,
+                "current_reward": 0.2789713442325592,
+                "top_5_actions": [
+                  {
+                    "action_id": 137,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 152,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 9,
+                "packages_remaining": 23,
+                "current_reward": 0.2919921875,
+                "top_5_actions": [
+                  {
+                    "action_id": 128,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.11764705926179886
+                  },
+                  {
+                    "action_id": 160,
+                    "probability": 0.11764705926179886
+                  }
+                ]
+              },
+              {
+                "step": 10,
+                "packages_remaining": 22,
+                "current_reward": 0.3284505307674408,
+                "top_5_actions": [
+                  {
+                    "action_id": 1,
+                    "probability": 1.0
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 2,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 3,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 4,
+                    "probability": 0.0
+                  }
+                ]
+              }
+            ],
+            "baseline_reward": 0.3479817807674408,
+            "mcts_reward": 0.3479817807674408,
+            "improvement": 0.0
+          },
+          {
+            "game_index": 2,
+            "container_height": 24,
+            "initial_packages": [
+              {
+                "index": 0,
+                "dimensions": [
+                  8,
+                  6,
+                  4
+                ]
+              },
+              {
+                "index": 1,
+                "dimensions": [
+                  6,
+                  7,
+                  7
+                ]
+              },
+              {
+                "index": 2,
+                "dimensions": [
+                  7,
+                  4,
+                  5
+                ]
+              },
+              {
+                "index": 3,
+                "dimensions": [
+                  4,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 4,
+                "dimensions": [
+                  7,
+                  4,
+                  8
+                ]
+              },
+              {
+                "index": 5,
+                "dimensions": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "index": 6,
+                "dimensions": [
+                  6,
+                  5,
+                  8
+                ]
+              },
+              {
+                "index": 7,
+                "dimensions": [
+                  5,
+                  5,
+                  7
+                ]
+              },
+              {
+                "index": 8,
+                "dimensions": [
+                  4,
+                  8,
+                  5
+                ]
+              },
+              {
+                "index": 9,
+                "dimensions": [
+                  6,
+                  4,
+                  5
+                ]
+              },
+              {
+                "index": 10,
+                "dimensions": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "index": 11,
+                "dimensions": [
+                  8,
+                  7,
+                  4
+                ]
+              },
+              {
+                "index": 12,
+                "dimensions": [
+                  6,
+                  5,
+                  7
+                ]
+              },
+              {
+                "index": 13,
+                "dimensions": [
+                  5,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 14,
+                "dimensions": [
+                  6,
+                  8,
+                  7
+                ]
+              },
+              {
+                "index": 15,
+                "dimensions": [
+                  7,
+                  8,
+                  5
+                ]
+              },
+              {
+                "index": 16,
+                "dimensions": [
+                  7,
+                  5,
+                  8
+                ]
+              },
+              {
+                "index": 17,
+                "dimensions": [
+                  8,
+                  8,
+                  5
+                ]
+              },
+              {
+                "index": 18,
+                "dimensions": [
+                  4,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 19,
+                "dimensions": [
+                  5,
+                  7,
+                  4
+                ]
+              },
+              {
+                "index": 20,
+                "dimensions": [
+                  4,
+                  6,
+                  8
+                ]
+              },
+              {
+                "index": 21,
+                "dimensions": [
+                  4,
+                  7,
+                  8
+                ]
+              },
+              {
+                "index": 22,
+                "dimensions": [
+                  5,
+                  6,
+                  8
+                ]
+              },
+              {
+                "index": 23,
+                "dimensions": [
+                  8,
+                  6,
+                  6
+                ]
+              },
+              {
+                "index": 24,
+                "dimensions": [
+                  8,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 25,
+                "dimensions": [
+                  6,
+                  7,
+                  5
+                ]
+              },
+              {
+                "index": 26,
+                "dimensions": [
+                  8,
+                  4,
+                  5
+                ]
+              },
+              {
+                "index": 27,
+                "dimensions": [
+                  6,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 28,
+                "dimensions": [
+                  4,
+                  7,
+                  8
+                ]
+              },
+              {
+                "index": 29,
+                "dimensions": [
+                  6,
+                  7,
+                  5
+                ]
+              },
+              {
+                "index": 30,
+                "dimensions": [
+                  8,
+                  8,
+                  7
+                ]
+              },
+              {
+                "index": 31,
+                "dimensions": [
+                  6,
+                  4,
+                  7
+                ]
+              }
+            ],
+            "moves": [
+              {
+                "step": 0,
+                "packages_remaining": 32,
+                "current_reward": 0.0,
+                "top_5_actions": [
+                  {
+                    "action_id": 135,
+                    "probability": 0.1388888955116272
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.1388888955116272
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.1388888955116272
+                  },
+                  {
+                    "action_id": 102,
+                    "probability": 0.1111111119389534
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.1111111119389534
+                  }
+                ]
+              },
+              {
+                "step": 1,
+                "packages_remaining": 31,
+                "current_reward": 0.03125,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 102,
+                    "probability": 0.0714285746216774
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "packages_remaining": 30,
+                "current_reward": 0.0791015625,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.11627907305955887
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.11627907305955887
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09302325546741486
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.09302325546741486
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.09302325546741486
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "packages_remaining": 29,
+                "current_reward": 0.1018880233168602,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.09756097197532654
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "packages_remaining": 28,
+                "current_reward": 0.1149088516831398,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.2222222238779068
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.1111111119389534
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.1111111119389534
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.1111111119389534
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.1111111119389534
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "packages_remaining": 27,
+                "current_reward": 0.1513671875,
+                "top_5_actions": [
+                  {
+                    "action_id": 136,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 137,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 102,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "packages_remaining": 26,
+                "current_reward": 0.2071940153837204,
+                "top_5_actions": [
+                  {
+                    "action_id": 137,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 7,
+                "packages_remaining": 25,
+                "current_reward": 0.2462565153837204,
+                "top_5_actions": [
+                  {
+                    "action_id": 144,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 161,
+                    "probability": 0.09756097197532654
+                  },
+                  {
+                    "action_id": 128,
+                    "probability": 0.0731707289814949
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.0731707289814949
+                  }
+                ]
+              },
+              {
+                "step": 8,
+                "packages_remaining": 24,
+                "current_reward": 0.2747395932674408,
+                "top_5_actions": [
+                  {
+                    "action_id": 135,
+                    "probability": 0.15000000596046448
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.15000000596046448
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.10000000149011612
+                  },
+                  {
+                    "action_id": 152,
+                    "probability": 0.10000000149011612
+                  },
+                  {
+                    "action_id": 134,
+                    "probability": 0.07500000298023224
+                  }
+                ]
+              },
+              {
+                "step": 9,
+                "packages_remaining": 23,
+                "current_reward": 0.30078125,
+                "top_5_actions": [
+                  {
+                    "action_id": 145,
+                    "probability": 0.1111111119389534
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.08888889104127884
+                  },
+                  {
+                    "action_id": 161,
+                    "probability": 0.08888889104127884
+                  },
+                  {
+                    "action_id": 113,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 128,
+                    "probability": 0.06666667014360428
+                  }
+                ]
+              },
+              {
+                "step": 10,
+                "packages_remaining": 22,
+                "current_reward": 0.3203125,
+                "top_5_actions": [
+                  {
+                    "action_id": 5,
+                    "probability": 0.12121212482452393
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 161,
+                    "probability": 0.09090909361839294
+                  },
+                  {
+                    "action_id": 163,
+                    "probability": 0.09090909361839294
+                  }
+                ]
+              },
+              {
+                "step": 11,
+                "packages_remaining": 21,
+                "current_reward": 0.3307291567325592,
+                "top_5_actions": [
+                  {
+                    "action_id": 9,
+                    "probability": 1.0
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 2,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 3,
+                    "probability": 0.0
+                  }
+                ]
+              },
+              {
+                "step": 12,
+                "packages_remaining": 20,
+                "current_reward": 0.3671875,
+                "top_5_actions": [
+                  {
+                    "action_id": 145,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.09375
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.09375
+                  },
+                  {
+                    "action_id": 161,
+                    "probability": 0.09375
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.0625
+                  }
+                ]
+              },
+              {
+                "step": 13,
+                "packages_remaining": 19,
+                "current_reward": 0.4013671875,
+                "top_5_actions": [
+                  {
+                    "action_id": 144,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 129,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 161,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 128,
+                    "probability": 0.0714285746216774
+                  }
+                ]
+              },
+              {
+                "step": 14,
+                "packages_remaining": 18,
+                "current_reward": 0.4176432192325592,
+                "top_5_actions": [
+                  {
+                    "action_id": 8,
+                    "probability": 0.26829269528388977
+                  },
+                  {
+                    "action_id": 23,
+                    "probability": 0.2195121943950653
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.1463414579629898
+                  },
+                  {
+                    "action_id": 24,
+                    "probability": 0.12195122241973877
+                  },
+                  {
+                    "action_id": 39,
+                    "probability": 0.12195122241973877
+                  }
+                ]
+              },
+              {
+                "step": 15,
+                "packages_remaining": 17,
+                "current_reward": 0.4723307192325592,
+                "top_5_actions": [
+                  {
+                    "action_id": 5,
+                    "probability": 0.1538461595773697
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.1538461595773697
+                  },
+                  {
+                    "action_id": 21,
+                    "probability": 0.1538461595773697
+                  },
+                  {
+                    "action_id": 23,
+                    "probability": 0.1538461595773697
+                  },
+                  {
+                    "action_id": 4,
+                    "probability": 0.07692307978868484
+                  }
+                ]
+              },
+              {
+                "step": 16,
+                "packages_remaining": 16,
+                "current_reward": 0.5179036259651184,
+                "top_5_actions": [
+                  {
+                    "action_id": 5,
+                    "probability": 1.0
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 2,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 3,
+                    "probability": 0.0
+                  }
+                ]
+              }
+            ],
+            "baseline_reward": 0.3307291567325592,
+            "mcts_reward": 0.5634765625,
+            "improvement": 0.2327474057674408
+          },
+          {
+            "game_index": 3,
+            "container_height": 24,
+            "initial_packages": [
+              {
+                "index": 0,
+                "dimensions": [
+                  8,
+                  8,
+                  4
+                ]
+              },
+              {
+                "index": 1,
+                "dimensions": [
+                  4,
+                  6,
+                  6
+                ]
+              },
+              {
+                "index": 2,
+                "dimensions": [
+                  6,
+                  5,
+                  7
+                ]
+              },
+              {
+                "index": 3,
+                "dimensions": [
+                  6,
+                  8,
+                  5
+                ]
+              },
+              {
+                "index": 4,
+                "dimensions": [
+                  4,
+                  6,
+                  4
+                ]
+              },
+              {
+                "index": 5,
+                "dimensions": [
+                  6,
+                  7,
+                  4
+                ]
+              },
+              {
+                "index": 6,
+                "dimensions": [
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "index": 7,
+                "dimensions": [
+                  5,
+                  5,
+                  8
+                ]
+              },
+              {
+                "index": 8,
+                "dimensions": [
+                  7,
+                  4,
+                  7
+                ]
+              },
+              {
+                "index": 9,
+                "dimensions": [
+                  5,
+                  7,
+                  6
+                ]
+              },
+              {
+                "index": 10,
+                "dimensions": [
+                  5,
+                  4,
+                  7
+                ]
+              },
+              {
+                "index": 11,
+                "dimensions": [
+                  7,
+                  8,
+                  8
+                ]
+              },
+              {
+                "index": 12,
+                "dimensions": [
+                  8,
+                  8,
+                  4
+                ]
+              },
+              {
+                "index": 13,
+                "dimensions": [
+                  4,
+                  6,
+                  7
+                ]
+              },
+              {
+                "index": 14,
+                "dimensions": [
+                  7,
+                  5,
+                  4
+                ]
+              },
+              {
+                "index": 15,
+                "dimensions": [
+                  4,
+                  8,
+                  4
+                ]
+              },
+              {
+                "index": 16,
+                "dimensions": [
+                  5,
+                  5,
+                  7
+                ]
+              },
+              {
+                "index": 17,
+                "dimensions": [
+                  7,
+                  8,
+                  8
+                ]
+              },
+              {
+                "index": 18,
+                "dimensions": [
+                  4,
+                  7,
+                  4
+                ]
+              },
+              {
+                "index": 19,
+                "dimensions": [
+                  5,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 20,
+                "dimensions": [
+                  5,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 21,
+                "dimensions": [
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "index": 22,
+                "dimensions": [
+                  6,
+                  4,
+                  5
+                ]
+              },
+              {
+                "index": 23,
+                "dimensions": [
+                  7,
+                  5,
+                  8
+                ]
+              },
+              {
+                "index": 24,
+                "dimensions": [
+                  8,
+                  4,
+                  7
+                ]
+              },
+              {
+                "index": 25,
+                "dimensions": [
+                  6,
+                  7,
+                  5
+                ]
+              },
+              {
+                "index": 26,
+                "dimensions": [
+                  4,
+                  5,
+                  8
+                ]
+              },
+              {
+                "index": 27,
+                "dimensions": [
+                  8,
+                  7,
+                  6
+                ]
+              },
+              {
+                "index": 28,
+                "dimensions": [
+                  5,
+                  5,
+                  6
+                ]
+              },
+              {
+                "index": 29,
+                "dimensions": [
+                  4,
+                  4,
+                  6
+                ]
+              },
+              {
+                "index": 30,
+                "dimensions": [
+                  7,
+                  6,
+                  5
+                ]
+              },
+              {
+                "index": 31,
+                "dimensions": [
+                  4,
+                  4,
+                  5
+                ]
+              }
+            ],
+            "moves": [
+              {
+                "step": 0,
+                "packages_remaining": 32,
+                "current_reward": 0.0,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.13513512909412384
+                  },
+                  {
+                    "action_id": 102,
+                    "probability": 0.10810811072587967
+                  },
+                  {
+                    "action_id": 5,
+                    "probability": 0.0810810774564743
+                  }
+                ]
+              },
+              {
+                "step": 1,
+                "packages_remaining": 31,
+                "current_reward": 0.0416666679084301,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 144,
+                    "probability": 0.095238097012043
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "packages_remaining": 30,
+                "current_reward": 0.0651041641831398,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 102,
+                    "probability": 0.0714285746216774
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "packages_remaining": 29,
+                "current_reward": 0.0992838516831398,
+                "top_5_actions": [
+                  {
+                    "action_id": 6,
+                    "probability": 0.08888889104127884
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.06666667014360428
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.04444444552063942
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "packages_remaining": 28,
+                "current_reward": 0.1383463591337204,
+                "top_5_actions": [
+                  {
+                    "action_id": 135,
+                    "probability": 0.11627907305955887
+                  },
+                  {
+                    "action_id": 136,
+                    "probability": 0.11627907305955887
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.09302325546741486
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.09302325546741486
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.09302325546741486
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "packages_remaining": 27,
+                "current_reward": 0.1539713591337204,
+                "top_5_actions": [
+                  {
+                    "action_id": 144,
+                    "probability": 0.1190476194024086
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 128,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 160,
+                    "probability": 0.095238097012043
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "packages_remaining": 26,
+                "current_reward": 0.1813151091337204,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.095238097012043
+                  },
+                  {
+                    "action_id": 102,
+                    "probability": 0.0714285746216774
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.0714285746216774
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.0714285746216774
+                  }
+                ]
+              },
+              {
+                "step": 7,
+                "packages_remaining": 25,
+                "current_reward": 0.20166015625,
+                "top_5_actions": [
+                  {
+                    "action_id": 135,
+                    "probability": 0.10000000149011612
+                  },
+                  {
+                    "action_id": 6,
+                    "probability": 0.07500000298023224
+                  },
+                  {
+                    "action_id": 131,
+                    "probability": 0.07500000298023224
+                  },
+                  {
+                    "action_id": 145,
+                    "probability": 0.07500000298023224
+                  },
+                  {
+                    "action_id": 163,
+                    "probability": 0.07500000298023224
+                  }
+                ]
+              },
+              {
+                "step": 8,
+                "packages_remaining": 24,
+                "current_reward": 0.2342122346162796,
+                "top_5_actions": [
+                  {
+                    "action_id": 131,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.125
+                  },
+                  {
+                    "action_id": 147,
+                    "probability": 0.07500000298023224
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.05000000074505806
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.05000000074505806
+                  }
+                ]
+              },
+              {
+                "step": 9,
+                "packages_remaining": 23,
+                "current_reward": 0.26611328125,
+                "top_5_actions": [
+                  {
+                    "action_id": 144,
+                    "probability": 0.11538461595773697
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.07692307978868484
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.07692307978868484
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.07692307978868484
+                  },
+                  {
+                    "action_id": 41,
+                    "probability": 0.07692307978868484
+                  }
+                ]
+              },
+              {
+                "step": 10,
+                "packages_remaining": 22,
+                "current_reward": 0.30029296875,
+                "top_5_actions": [
+                  {
+                    "action_id": 136,
+                    "probability": 0.25
+                  },
+                  {
+                    "action_id": 135,
+                    "probability": 0.1666666716337204
+                  },
+                  {
+                    "action_id": 6,
+                    "probability": 0.0833333358168602
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.0833333358168602
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.0833333358168602
+                  }
+                ]
+              },
+              {
+                "step": 11,
+                "packages_remaining": 21,
+                "current_reward": 0.3230794370174408,
+                "top_5_actions": [
+                  {
+                    "action_id": 8,
+                    "probability": 0.2857142984867096
+                  },
+                  {
+                    "action_id": 7,
+                    "probability": 0.2142857164144516
+                  },
+                  {
+                    "action_id": 6,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 22,
+                    "probability": 0.1428571492433548
+                  },
+                  {
+                    "action_id": 23,
+                    "probability": 0.1428571492433548
+                  }
+                ]
+              },
+              {
+                "step": 12,
+                "packages_remaining": 20,
+                "current_reward": 0.39599609375,
+                "top_5_actions": [
+                  {
+                    "action_id": 7,
+                    "probability": 0.36000001430511475
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.36000001430511475
+                  },
+                  {
+                    "action_id": 6,
+                    "probability": 0.2800000011920929
+                  },
+                  {
+                    "action_id": 0,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0
+                  }
+                ]
+              },
+              {
+                "step": 13,
+                "packages_remaining": 19,
+                "current_reward": 0.4376627504825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 5,
+                    "probability": 0.1666666716337204
+                  },
+                  {
+                    "action_id": 8,
+                    "probability": 0.1666666716337204
+                  },
+                  {
+                    "action_id": 25,
+                    "probability": 0.1666666716337204
+                  },
+                  {
+                    "action_id": 41,
+                    "probability": 0.1666666716337204
+                  },
+                  {
+                    "action_id": 57,
+                    "probability": 0.1666666716337204
+                  }
+                ]
+              },
+              {
+                "step": 14,
+                "packages_remaining": 18,
+                "current_reward": 0.4650065004825592,
+                "top_5_actions": [
+                  {
+                    "action_id": 0,
+                    "probability": 0.5
+                  },
+                  {
+                    "action_id": 11,
+                    "probability": 0.5
+                  },
+                  {
+                    "action_id": 1,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 2,
+                    "probability": 0.0
+                  },
+                  {
+                    "action_id": 3,
+                    "probability": 0.0
+                  }
+                ]
+              }
+            ],
+            "baseline_reward": 0.3230794370174408,
+            "mcts_reward": 0.48779296875,
+            "improvement": 0.1647135317325592
+          }
+        ],
+        "statistics": {
+          "avg_baseline_reward": 0.346923828125,
+          "std_baseline_reward": 0.024245971615508295,
+          "avg_mcts_reward": 0.4695638045668602,
+          "std_mcts_reward": 0.0774971169792383,
+          "games_improved": 3,
+          "games_total": 4
+        }
+      },
+      "training": {
+        "data_points": 46,
+        "augmented_points": 368,
+        "history": [
+          {
+            "epoch": 1,
+            "train_loss": 4.7321416934331255
+          },
+          {
+            "epoch": 2,
+            "train_loss": 4.253247419993083
+          },
+          {
+            "epoch": 3,
+            "train_loss": 4.069267312685649
+          },
+          {
+            "epoch": 4,
+            "train_loss": 3.938227812449137
+          },
+          {
+            "epoch": 5,
+            "train_loss": 3.82852437098821
+          },
+          {
+            "test_loss": 4.226351102193196
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "iterations": 5,
+    "games": 4,
+    "simulations": 32,
+    "epochs": 5,
+    "model_path": "policy_value_network.pth",
+    "worker": "127.0.0.1:8000",
+    "output": "training_results.json"
+  },
+  "training_end": "2025-12-02T05:25:58.845450"
+}

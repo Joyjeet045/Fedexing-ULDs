@@ -1,6 +1,0 @@
-torch
-numpy
-fastapi[standard]
-requests
-mypy
-tqdm
